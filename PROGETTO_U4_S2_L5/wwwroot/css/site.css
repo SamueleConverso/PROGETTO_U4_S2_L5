@@ -5,6 +5,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: antiquewhite;
 }
 
 html {
@@ -28,4 +29,31 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+.nav-item {
+    border: 1px solid transparent;
+}
+
+.nav-item:hover {
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: antiquewhite;
+}
+
+.colorNavText:hover {
+    color: #212529 !important;
+}
+
+.homeBtn {
+    background-color: #212529;
+    color: white;
+    border-radius: 10px;
+    padding: 6px;
+    display: inline-block;
+}
+
+.homeBtn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }

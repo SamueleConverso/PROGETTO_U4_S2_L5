@@ -31,8 +31,10 @@
 			<td class="align-middle"><img style="width: 100px" src="@Model.ImmagineAggiuntiva1" alt="Immagine extra 1" /></td>
 			<td class="align-middle"><img style="width: 100px" src="@Model.ImmagineAggiuntiva2" alt="Immagine extra 2" /></td>
 				<td class="align-middle">
-				<a class="btn btn-warning" asp-area="" asp-controller="Articolo" asp-action="Edit" asp-route-id="@Model.Id">Modifica</a>
-				<a class="btn btn-danger" asp-area="" asp-controller="Articolo" asp-action="Delete" asp-route-id="@Model.Id">Elimina</a>
+				<div class="d-flex flex-column gap-2 align-items-center">
+					<a class="homeBtn text-decoration-none text-white" style="width: fit-content" asp-area="" asp-controller="Articolo" asp-action="Edit" asp-route-id="@Model.Id">🖋️ Modifica</a>
+					<a class="homeBtn text-decoration-none text-white" style="width: fit-content" asp-area="" asp-controller="Articolo" asp-action="Delete" asp-route-id="@Model.Id">🗑️ Elimina</a>
+				</div>
 			</td>
 		</tr>
 	</tbody>
