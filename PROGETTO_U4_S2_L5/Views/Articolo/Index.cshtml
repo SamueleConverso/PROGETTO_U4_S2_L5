@@ -16,16 +16,18 @@
 }
 
 <div class="container">
-    <div class="row">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 @foreach (var articolo in Model.Articoli) {
-    <div class="col card" style="width: 18rem;">
-        <img style="max-width: 400px" src="@articolo.Immagine" class="card-img-top" alt="...">
+    <div class="col">
+    <div class="card h-100">
+        <img src="@articolo.Immagine" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">@articolo.Nome</h5>
             <p class="card-text">€ @articolo.Prezzo</p>
             <p class="card-text">@articolo.Descrizione</p>
             <a class="btn btn-warning" asp-area="" asp-controller="Articolo" asp-action="Details" asp-route-id="@articolo.Id">Dettagli</a>
         </div>
+    </div>
     </div>
 }
     </div>

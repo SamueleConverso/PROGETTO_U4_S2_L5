@@ -11,8 +11,8 @@ namespace PROGETTO_U4_S2_L5.Controllers {
                 Prezzo = 10,
                 Descrizione = "Descrizione articolo 1",
                 Immagine = "https://img.freepik.com/foto-gratuito/scarpe-sportive-da-corsa_1203-3414.jpg?t=st=1740131879~exp=1740135479~hmac=e69d605cad33e9aa1754aeae482377aeee55babf7a17b3c9c606a697853499d6&w=1800",
-                ImmagineAggiuntiva1 = "",
-                ImmagineAggiuntiva2 = ""
+                ImmagineAggiuntiva1 = "https://img.freepik.com/psd-gratis/eleganti-scarpe-oxford-in-pelle-marrone-una-scelta-elegante-di-calzature_191095-86336.jpg?t=st=1740139930~exp=1740143530~hmac=81e03878593892c0b6dcb9e55da78ffd654d7f377d2a9992302a39fef50f307a&w=1060",
+                ImmagineAggiuntiva2 = "https://img.freepik.com/psd-gratis/eleganti-scarpe-oxford-in-pelle-marrone-una-scelta-elegante-di-calzature_191095-86336.jpg?t=st=1740139930~exp=1740143530~hmac=81e03878593892c0b6dcb9e55da78ffd654d7f377d2a9992302a39fef50f307a&w=1060"
             },
             new Articolo {
                 Id = Guid.NewGuid(),
@@ -20,9 +20,18 @@ namespace PROGETTO_U4_S2_L5.Controllers {
                 Prezzo = 100,
                 Descrizione = "Descrizione articolo 2",
                 Immagine = "https://img.freepik.com/foto-gratuito/scarpe-sportive-da-corsa_1203-3414.jpg?t=st=1740131879~exp=1740135479~hmac=e69d605cad33e9aa1754aeae482377aeee55babf7a17b3c9c606a697853499d6&w=1800",
-                ImmagineAggiuntiva1 = "",
-                ImmagineAggiuntiva2 = ""
+                ImmagineAggiuntiva1 = "https://img.freepik.com/psd-gratis/eleganti-scarpe-oxford-in-pelle-marrone-una-scelta-elegante-di-calzature_191095-86336.jpg?t=st=1740139930~exp=1740143530~hmac=81e03878593892c0b6dcb9e55da78ffd654d7f377d2a9992302a39fef50f307a&w=1060",
+                ImmagineAggiuntiva2 = "https://img.freepik.com/psd-gratis/eleganti-scarpe-oxford-in-pelle-marrone-una-scelta-elegante-di-calzature_191095-86336.jpg?t=st=1740139930~exp=1740143530~hmac=81e03878593892c0b6dcb9e55da78ffd654d7f377d2a9992302a39fef50f307a&w=1060"
             },
+            new Articolo {
+                Id = Guid.NewGuid(),
+                Nome = "Articolo 3",
+                Prezzo = 1000,
+                Descrizione = "Descrizione articolo 3",
+                Immagine = "https://img.freepik.com/foto-gratuito/scarpe-sportive-da-corsa_1203-3414.jpg?t=st=1740131879~exp=1740135479~hmac=e69d605cad33e9aa1754aeae482377aeee55babf7a17b3c9c606a697853499d6&w=1800",
+                ImmagineAggiuntiva1 = "https://img.freepik.com/psd-gratis/eleganti-scarpe-oxford-in-pelle-marrone-una-scelta-elegante-di-calzature_191095-86336.jpg?t=st=1740139930~exp=1740143530~hmac=81e03878593892c0b6dcb9e55da78ffd654d7f377d2a9992302a39fef50f307a&w=1060",
+                ImmagineAggiuntiva2 = "https://img.freepik.com/psd-gratis/eleganti-scarpe-oxford-in-pelle-marrone-una-scelta-elegante-di-calzature_191095-86336.jpg?t=st=1740139930~exp=1740143530~hmac=81e03878593892c0b6dcb9e55da78ffd654d7f377d2a9992302a39fef50f307a&w=1060"
+            }
         };
 
         [HttpGet("articolo")]
