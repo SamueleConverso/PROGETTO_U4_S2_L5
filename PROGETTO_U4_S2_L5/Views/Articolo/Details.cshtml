@@ -11,7 +11,7 @@
 <table class="table">
 	<thead>
 		<tr>
-			<th>Id</th>
+			<th style="display: none" id="thId">Id</th>
 			<th>Nome</th>
 			<th>Prezzo</th>
 			<th>Descrizione</th>
@@ -23,7 +23,7 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td class="align-middle">@Model.Id</td>
+			<td class="align-middle" style="display: none" id="tdId">@Model.Id</td>
 			<td class="align-middle">@Model.Nome</td>
 			<td class="align-middle">€ @Model.Prezzo</td>
 			<td class="align-middle">@Model.Descrizione</td>
@@ -38,3 +38,27 @@
 	</tbody>
 </table>
 </div>
+
+<div class="d-flex gap-1">
+	<label for="toggleId">Toggle Id</label>
+	<input type="checkbox" id="toggleId" onchange="handleToggleId()"/>
+</div>
+
+<script>
+	const thId = document.getElementById("thId");
+	const tdId = document.getElementById("tdId");
+	let valueCheckBox = false;
+
+	function handleToggleId() {
+		valueCheckBox = document.getElementById("toggleId").checked;
+		if (valueCheckBox) {
+		thId.style.display = "table-cell";
+		tdId.style.display = "table-cell";
+	} else {
+		thId.style.display = "none";
+		tdId.style.display = "none";
+	}
+	}
+
+	
+</script>
