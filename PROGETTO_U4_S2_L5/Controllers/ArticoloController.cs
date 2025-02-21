@@ -113,5 +113,23 @@ namespace PROGETTO_U4_S2_L5.Controllers {
 
             return View(articoloEdit);
         }
+
+        [HttpPost("articolo/edit/save/{id:guid}")]
+        public IActionResult SaveEdit(Guid id, ArticoloEdit articoloEdit) {
+            var existingArticolo = ArticoliListaStatica.FirstOrDefault(a => a.Id == id);
+
+            if (existingArticolo == null) {
+                return RedirectToAction("Index");
+            }
+
+            existingArticolo.Nome = articoloEdit.Nome;
+            existingArticolo.Prezzo = articoloEdit.Prezzo;
+            existingArticolo.Descrizione = articoloEdit.Descrizione;
+            existingArticolo.Immagine = articoloEdit.Immagine;
+            existingArticolo.ImmagineAggiuntiva1 = articoloEdit.ImmagineAggiuntiva1;
+            existingArticolo.ImmagineAggiuntiva2 = articoloEdit.ImmagineAggiuntiva2;
+
+            return RedirectToAction("Index");
+        }
     }
 }
