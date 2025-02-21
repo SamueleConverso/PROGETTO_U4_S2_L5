@@ -1,0 +1,40 @@
+﻿@model ArticoloDetails
+
+@{
+	ViewData["Title"] = "Dettagli articolo";
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+
+
+<div class="container-fluid">
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Nome</th>
+			<th>Prezzo</th>
+			<th>Descrizione</th>
+			<th>Immagine</th>
+			<th>Immagine extra 1</th>
+			<th>Immagine extra 2</th>
+			<th>Altro</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="align-middle">@Model.Id</td>
+			<td class="align-middle">@Model.Nome</td>
+			<td class="align-middle">€ @Model.Prezzo</td>
+			<td class="align-middle">@Model.Descrizione</td>
+			<td class="align-middle"><img style="width: 100px" src="@Model.Immagine" alt="Immagine articolo" /></td>
+			<td class="align-middle"><img style="width: 100px" src="@Model.ImmagineAggiuntiva1" alt="Immagine extra 1" /></td>
+			<td class="align-middle"><img style="width: 100px" src="@Model.ImmagineAggiuntiva2" alt="Immagine extra 2" /></td>
+				<td class="align-middle">
+				<a class="btn btn-warning" asp-area="" asp-controller="Articolo" asp-action="Edit" asp-route-id="@Model.Id">Modifica</a>
+				<a class="btn btn-danger" asp-area="" asp-controller="Articolo" asp-action="Delete" asp-route-id="@Model.Id">Elimina</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
